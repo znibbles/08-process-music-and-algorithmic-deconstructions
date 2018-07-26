@@ -22,7 +22,7 @@ Let's make two inlets for the frequencies and amplitudes lists, respectively. Wi
 
 We instantiate two `[jit.poke~]` objects for the values, respectively, and fetch our frame count from outside (what's hiding in the `[p start_stop_counter]` subpatch. This goes into the second inlet, as it denotes the x (=time) dimension of the matrix.
 
-Into the first inlet we feed the values for frequency and amplitude, and the last inlet is specified by the voice number, this time starting at 0, as it is the y dimension of the matrix. Let's also make two number boxes so we can observe what is going on, later.
+Into the first inlets we feed the values for frequency and amplitude, and the last inlet is specified by the voice number, this time starting at 0, as it is the y dimension of the matrix. Let's also make two number boxes so we can observe what is going on, later.
 
 We instantiate the poly with 20 voices and an `@target 0` attribute, which is important, because it allows the lists to be delivered to all voices simultaneously.
 
