@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 555.0, 79.0, 635.0, 587.0 ],
+		"rect" : [ 555.0, 79.0, 635.0, 682.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,142 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 33.0, 382.0, 130.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.dimmap @invert 0 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 34.5, 548.0, 130.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.dimmap @invert 0 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 34.5, 513.0, 124.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.op @op * @val 50."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 116.0, 172.5, 60.0, 22.0 ],
+					"style" : "",
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 98.5, 105.5, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 60.5, 104.5, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 60.5, 72.0, 95.0, 22.0 ],
+					"style" : "",
+					"text" : "route start done"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"data" : 					{
+						"clips" : [ 							{
+								"filename" : "Mac OS HD:/Users/jrubisch/Documents/_CODE/art_music/znibbles-github/08-process-music-and-algorithmic-deconstructions/01_2d_wavetable.aiff",
+								"filekind" : "audiofile",
+								"loop" : 0,
+								"content_state" : 								{
+									"quality" : [ "basic" ],
+									"speed" : [ 1.0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"basictuning" : [ 440 ],
+									"timestretch" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"pitchcorrection" : [ 0 ],
+									"pitchshift" : [ 1.0 ],
+									"slurtime" : [ 0.0 ],
+									"formantcorrection" : [ 0 ],
+									"play" : [ 0 ],
+									"mode" : [ "basic" ],
+									"formant" : [ 1.0 ],
+									"originaltempo" : [ 120.0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"id" : "obj-22",
+					"maxclass" : "playlist~",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
+					"patching_rect" : [ 33.0, 23.0, 150.0, 30.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 91.75, 169.5, 29.5, 22.0 ],
+					"patching_rect" : [ 98.5, 139.5, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "0"
 				}
@@ -63,7 +193,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -250,7 +380,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 271.75, 169.5, 80.0, 22.0 ],
+					"patching_rect" : [ 232.0, 177.0, 80.0, 22.0 ],
 					"style" : "",
 					"text" : "send~ fc_rec"
 				}
@@ -295,7 +425,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 341.0, 208.0, 108.0, 20.0 ],
+					"patching_rect" : [ 193.0, 254.0, 108.0, 20.0 ],
 					"style" : "",
 					"text" : "qmetro 100 @active 1"
 				}
@@ -327,19 +457,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "dropfile",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 41.75, 8.0, 141.0, 56.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 68.25, 65.0, 185.5, 56.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-7",
@@ -347,80 +464,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 41.75, 118.0, 32.5, 20.0 ],
+					"patching_rect" : [ 60.5, 139.5, 32.5, 20.0 ],
 					"style" : "",
 					"text" : "1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "", "bang" ],
-					"patching_rect" : [ 41.75, 73.0, 141.0, 20.0 ],
-					"style" : "",
-					"text" : "t b s b"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
-					"id" : "obj-8",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 102.75, 118.0, 47.0, 20.0 ],
-					"style" : "",
-					"text" : "open $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 41.75, 152.0, 42.0, 20.0 ],
-					"saved_object_attributes" : 					{
-						"basictuning" : 440,
-						"followglobaltempo" : 0,
-						"formantcorrection" : 0,
-						"mode" : "basic",
-						"originallength" : [ 17260.255859, "ticks" ],
-						"originaltempo" : 120.0,
-						"pitchcorrection" : 0,
-						"quality" : "basic",
-						"timestretch" : [ 0 ]
-					}
-,
-					"style" : "",
-					"text" : "sfplay~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 10.0,
-					"id" : "obj-9",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 49.25, 27.0, 126.0, 18.0 ],
-					"style" : "",
-					"text" : "Drop WAV/AIFF File here"
 				}
 
 			}
@@ -433,7 +479,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.75, 411.0, 32.5, 20.0 ],
+					"patching_rect" : [ 34.5, 444.0, 32.5, 20.0 ],
 					"style" : "",
 					"text" : "write"
 				}
@@ -448,7 +494,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 96.0, 316.0, 32.5, 20.0 ],
+					"patching_rect" : [ 33.0, 284.0, 32.5, 20.0 ],
 					"style" : "",
 					"text" : "write"
 				}
@@ -463,7 +509,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 34.5, 372.0, 144.0, 22.0 ],
+					"patching_rect" : [ 33.0, 349.0, 144.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.op @op * @val 0.0002"
 				}
@@ -504,7 +550,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 34.5, 439.0, 213.0, 22.0 ],
+					"patching_rect" : [ 34.5, 475.0, 213.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.matrix amplitudes 1 float32 1000 20"
 				}
@@ -519,7 +565,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 34.5, 342.0, 217.0, 22.0 ],
+					"patching_rect" : [ 33.0, 319.0, 217.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.matrix frequencies 1 float32 1000 20"
 				}
@@ -532,7 +578,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 232.0, 201.0, 59.0, 22.0 ],
+					"patching_rect" : [ 207.0, 201.0, 59.0, 22.0 ],
 					"style" : "",
 					"text" : "peaks 20"
 				}
@@ -547,7 +593,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 116.0, 201.0, 80.0, 22.0 ],
 					"style" : "",
-					"text" : "threshold 0.2"
+					"text" : "threshold 0.1"
 				}
 
 			}
@@ -564,12 +610,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 3,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 34.0, 79.0, 640.0, 480.0 ],
+						"rect" : [ 73.0, 233.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -596,35 +642,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
-								"box" : 								{
-									"id" : "obj-9",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 258.0, 202.0, 51.0, 22.0 ],
-									"style" : "",
-									"text" : "target 0"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-7",
-									"linecount" : 38,
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 357.0, 173.0, 50.0, 518.0 ],
-									"style" : "",
-									"text" : "229.559219 475.54 1283.62561 1292.408936 1402.71936 1475.892456 2153.947754 2220.378662 3145.363281 8593.521484 2201.556152 1997.945068 2091.716309 2183.657715 2086.309326 2172.632568 2385.455322 2682.13208 2756.875977 2880."
-								}
-
-							}
-, 							{
 								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "message",
@@ -643,7 +661,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 52.5, 257.0, 254.0, 22.0 ],
+									"patching_rect" : [ 58.0, 249.0, 254.0, 22.0 ],
 									"style" : "",
 									"text" : "poly~ 01_analysis.poly @voices 20 @target 0"
 								}
@@ -658,7 +676,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 152.0, 58.0, 22.0 ],
+									"patching_rect" : [ 58.0, 152.0, 58.0, 22.0 ],
 									"style" : "",
 									"text" : "zl delace"
 								}
@@ -673,9 +691,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 58.0, 100.0, 100.0, 20.0 ],
+									"patching_rect" : [ 58.0, 100.0, 134.0, 20.0 ],
 									"style" : "",
-									"text" : "zsa.easy_freqpeak~"
+									"text" : "zsa.easy_freqpeak~ 2048 4"
 								}
 
 							}
@@ -718,15 +736,6 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
-									"order" : 1,
-									"source" : [ "obj-150", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-7", 1 ],
-									"order" : 0,
 									"source" : [ "obj-150", 0 ]
 								}
 
@@ -759,17 +768,10 @@
 								}
 
 							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"source" : [ "obj-9", 0 ]
-								}
-
-							}
  ]
 					}
 ,
-					"patching_rect" : [ 33.0, 254.0, 79.0, 20.0 ],
+					"patching_rect" : [ 33.0, 254.0, 76.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -779,7 +781,7 @@
 					}
 ,
 					"style" : "",
-					"text" : "p zsa_freqpeak"
+					"text" : "p zsa_analysis"
 				}
 
 			}
@@ -800,7 +802,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-15", 0 ],
+					"midpoints" : [ 42.5, 414.0, 273.0, 414.0, 273.0, 279.0, 297.0, 279.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -851,9 +854,60 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"midpoints" : [ 44.0, 403.0, 273.5, 403.0, 273.5, 280.0, 297.0, 280.0 ],
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 1 ],
+					"order" : 0,
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"order" : 1,
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-157", 0 ],
+					"order" : 2,
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-22", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-24", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -875,8 +929,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"midpoints" : [ 44.0, 469.0, 273.5, 469.0, 273.5, 415.0, 297.0, 415.0 ],
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -890,22 +950,17 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-5", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-2", 0 ],
+					"order" : 1,
 					"source" : [ "obj-5", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-5", 1 ]
+					"destination" : [ "obj-4", 0 ],
+					"order" : 0,
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -925,61 +980,53 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-157", 0 ],
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"source" : [ "obj-6", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"order" : 0,
 					"source" : [ "obj-7", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"order" : 1,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"midpoints" : [ 44.0, 579.0, 273.0, 579.0, 273.0, 423.0, 297.0, 423.0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "zsa.easy_freqpeak~.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/zsa.descriptors_1.01/misc",
-				"patcherrelativepath" : "../../../../../Max 7/Packages/zsa.descriptors_1.01/misc",
+				"bootpath" : "~/Documents/Max 7/Packages/zsa.descriptors/misc",
+				"patcherrelativepath" : "../../../../Max 7/Packages/zsa.descriptors/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "zsa.abs_freqpeak~.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/zsa.descriptors_1.01/misc",
-				"patcherrelativepath" : "../../../../../Max 7/Packages/zsa.descriptors_1.01/misc",
+				"bootpath" : "~/Documents/Max 7/Packages/zsa.descriptors/misc",
+				"patcherrelativepath" : "../../../../Max 7/Packages/zsa.descriptors/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "01_analysis.poly.maxpat",
-				"bootpath" : "~/Documents/_CODE/art_music/znibbles/znibbles-github/08-process-music-and-algorithmic-deconstructions",
+				"bootpath" : "~/Documents/_CODE/art_music/znibbles-github/08-process-music-and-algorithmic-deconstructions",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "01_2d_wavetable.aiff",
+				"bootpath" : "~/Documents/_CODE/art_music/znibbles-github/08-process-music-and-algorithmic-deconstructions",
+				"patcherrelativepath" : ".",
+				"type" : "AIFF",
 				"implicit" : 1
 			}
 , 			{
